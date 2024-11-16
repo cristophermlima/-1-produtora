@@ -1,8 +1,72 @@
+/* Hero.css */
+
+/* Container principal */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Vídeo de fundo */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Texto principal */
+.hero-text {
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-text .estatico h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.hero-text .estatico .text-yellow2 {
+  color: #ffd700; /* Amarelo para destaque */
+  font-size: 4rem;
+}
+
+/* Texto dinâmico */
+.hero-text .dinamico span {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffd700;
+  animation: fade 0.5s ease-in-out;
+}
+
+/* Animação do texto dinâmico */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Cards com Parallax */
 .card-container {
   display: flex;
   gap: 20px;
   justify-content: center;
+  padding: 50px 20px;
   perspective: 800px;
 }
 
@@ -15,14 +79,14 @@
   transform-style: preserve-3d;
   background: transparent; /* Fundo transparente */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  animation: float 3s ease-in-out infinite; /* Animação contínua */
+  animation: float 3s ease-in-out infinite;
   transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px) rotateY(15deg) rotateX(-5deg); /* Movimento 3D dinâmico */
+  transform: translateY(-10px) rotateY(15deg) rotateX(-5deg);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  filter: brightness(1.2); /* Efeito de brilho */
+  filter: brightness(1.2);
 }
 
 .card:hover::before {
@@ -63,10 +127,10 @@
 
 .card:hover .message {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1.1); /* Aparecendo com um leve zoom */
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Keyframes para Movimento Contínuo */
+/* Keyframes para movimento contínuo */
 @keyframes float {
   0%, 100% {
     transform: translateY(0) rotateY(0) rotateX(0);
@@ -74,4 +138,14 @@
   50% {
     transform: translateY(-10px) rotateY(5deg) rotateX(3deg);
   }
+}
+
+/* Botão centralizado */
+.button-center {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.button-center a {
+  text-decoration: none;
 }
