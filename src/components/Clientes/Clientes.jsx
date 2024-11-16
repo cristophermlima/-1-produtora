@@ -1,7 +1,7 @@
 import './Clientes.css'
 import Button from '../Button/Button'
 import { Link } from 'react-router-dom'
-import depoimento1 from '../../assets/depoimento1.mp4'
+import depoimento1 from '../../../public/depoimento1.mp4'
 import depoimento3 from '../../assets/depoimento3.mp4'
 
 
@@ -30,7 +30,7 @@ function Clientes() {
 
                 <div className='videos'>
                 <video width={300}  controls autoPlay loop muted>
-                    <source src={depoimento1} type='video/mp4' />
+                    <source src="/depoimento1" type='video/mp4' />
                 </video>
                 <video width={300}  controls preload='auto'>
                     <source src={depoimento3} type='video/mp4' />
