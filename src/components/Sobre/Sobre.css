@@ -1,25 +1,30 @@
 .sobre {
     background-color: #F7F2EF;
     width: 100%;
+    position: relative;
 }
 
-.titulo1 {
+.titulo {
     color: #111514;
+    background-color: #111514;
     font-size: 50px;
-    padding-top: 50px; /* Ajustado para um pequeno espaço superior */
+    padding-top: 50px; /* Ajuste de espaço superior */
     margin: 0 auto;
-    height: auto; /* Removido para evitar corte do título */
-    width: 800px;
+    height: auto;
+    width: 100%; /* Ajuste para o título ocupar a largura total */
+    max-width: 800px; /* Limita a largura do título para não ficar largo demais */
     text-align: center;
-    z-index: 2; /* Garante que o título não seja sobreposto por outros elementos */
-    position: relative; /* Para o z-index funcionar corretamente */
+    z-index: 10; /* Garante que o título não seja sobreposto */
+    position: relative;
+    background-color: transparent; /* Garante que o fundo seja transparente */
 }
 
 .equipe {
     justify-content: center;
     text-align: center;
     display: flex;
-    padding-bottom: 60px;
+    padding: 50px;
+    color: #111514;
 }
 
 .sobre-text1, .sobre-text2, .sobre-text4 {

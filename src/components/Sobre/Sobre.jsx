@@ -11,10 +11,11 @@ function Sobre() {
             <div className='sobre'>
 
                 <div className='titulo'>
-                    <h1>QUEM É A Ñ É + UMA</h1>
+                <h1>QUEM É A Ñ É + UMA</h1>
 
                 </div>
                 <div className='equipe'>
+               
                     <img src={equipe} height='500px'  />
                 </div>
                 <div className='sobre-text1'>
