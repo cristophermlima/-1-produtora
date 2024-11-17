@@ -1,111 +1,80 @@
-/* Estilo base */
 .sobre {
     background-color: #F7F2EF;
     width: 100%;
 }
 
-.titulo {
+.titulo1 {
     color: #111514;
     font-size: 50px;
-    padding-top: 100px;
+    padding-top: 50px; /* Ajustado para um pequeno espaço superior */
     margin: 0 auto;
-    height: 100px;
-    width: 80%; /* Alterado para porcentagem */
-    max-width: 800px;
+    height: auto; /* Removido para evitar corte do título */
+    width: 800px;
     text-align: center;
+    z-index: 2; /* Garante que o título não seja sobreposto por outros elementos */
+    position: relative; /* Para o z-index funcionar corretamente */
 }
 
 .equipe {
     justify-content: center;
     text-align: center;
     display: flex;
-    flex-wrap: wrap; /* Adicionado para ajustar ao redimensionar */
+    padding-bottom: 50px;
 }
 
-.sobre-text1,
-.sobre-text2,
-.sobre-text3,
-.sobre-text4 {
-    width: 90%; /* Tornando a largura flexível */
-    max-width: 900px;
+.sobre-text1, .sobre-text2, .sobre-text4 {
+    width: 900px;
     background-color: #111514;
     color: #F7F2EF;
     font-size: 20px;
-    padding: 50px 20px; /* Ajuste para manter espaçamento */
-    margin: 50px auto 30px auto;
+    padding: 50px 20px;
+    margin: 0 auto;
     border-radius: 15px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .sobre-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Alinhamento centralizado */
-    flex-wrap: wrap; /* Permite que os itens se ajustem */
+    justify-content: flex-end;
     gap: 20px;
     padding: 20px;
+    padding-right: 500px;
+    padding-bottom: 100px;
 }
 
 .image-container {
-    flex: 1 1 300px; /* Ajustável com base no espaço disponível */
+    flex: 0 0 300px;
     max-width: 300px;
-    padding-bottom: 50px; /* Reduzido para dispositivos menores */
-    text-align: center;
+    padding-bottom: 100px;
 }
 
 .image-container img {
     width: 100%;
-    max-width: 300px; /* Limita a largura da imagem */
     object-fit: cover;
-    padding: 0; /* Remove padding para centralizar */
+    padding-left: 440px;
+    padding-bottom: 142px;
+}
+
+.sobre-text4 {
+    z-index: 2;
+    width: 900px;
+    background-color: #111514;
+    color: #F7F2EF;
+    padding: 20px;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .button-center {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px; /* Ajuste para dispositivos menores */
-}
-
-/* Estilo Responsivo */
-@media (max-width: 768px) {
-    .titulo {
-        font-size: 35px; /* Texto menor para telas menores */
-        padding-top: 50px;
-    }
-
-    .sobre-text1,
-    .sobre-text2,
-    .sobre-text3,
-    .sobre-text4 {
-        font-size: 18px; /* Texto menor */
-        padding: 30px 15px; /* Reduzido para espaço limitado */
-    }
-
-    .sobre-container {
-        padding-right: 20px; /* Removendo espaço desnecessário */
-    }
-
-    .image-container {
-        max-width: 100%; /* Ajuste para ocupar toda a largura */
-    }
-
-    .image-container img {
-        max-width: 90%; /* Adapta-se ao tamanho da tela */
-        padding: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .titulo {
-        font-size: 28px; /* Texto ainda menor */
-    }
-
-    .sobre-text1,
-    .sobre-text2,
-    .sobre-text3,
-    .sobre-text4 {
-        font-size: 16px;
-        padding: 20px 10px; /* Ajuste adicional */
-    }
+    margin-bottom: 100px;
 }
