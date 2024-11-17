@@ -7,10 +7,18 @@
 }
 
 /* Centralização da logo */
+.logo1 {
+    display: flex;          /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center;     /* Centraliza a imagem verticalmente (caso o contêiner tenha uma altura específica) */
+    height: 100%;           /* Garantir que o contêiner tenha altura suficiente para centralizar verticalmente */
+}
+
+
 .logo1 img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 1.25rem;
+    max-width: 100%;        /* Faz com que a imagem ocupe o máximo de largura possível sem ultrapassar */
+    height: auto;           /* Mantém a proporção original da imagem */
+    margin-bottom: 1.25rem; /* Espaço inferior */
 }
 
 /* Texto principal */
