@@ -1,12 +1,12 @@
 /* Título principal */
 .clientes-text1 {
     color: #F5BB19;
-    font-size: 40px;
-    padding-top: 100px;
+    font-size: 2.5rem; /* Usando rem para responsividade */
+    padding-top: 6.25rem; /* Ajuste de padding em rem */
     margin: 0 auto;
     height: auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 50rem; /* Max-width em rem */
     text-align: center;
     line-height: 1.2;
 }
@@ -14,12 +14,12 @@
 /* Subtítulo */
 .clientes-text2 {
     color: white;
-    font-size: 25px;
-    padding-top: 50px;
+    font-size: 1.5625rem; /* Usando rem */
+    padding-top: 3.125rem; /* Ajuste de padding em rem */
     margin: 0 auto;
     height: auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 50rem;
     text-align: center;
     line-height: 1.5;
 }
@@ -29,8 +29,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Espaço entre os botões */
-    padding: 50px 0;
+    gap: 1.25rem; /* Usando rem */
+    padding: 3.125rem 0; /* Usando rem */
 }
 
 /* Vídeos */
@@ -39,49 +39,49 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap; /* Permite que vídeos se ajustem em telas menores */
-    gap: 20px; /* Espaço entre os vídeos */
-    padding: 20px;
+    gap: 1.25rem; /* Espaço entre os vídeos em rem */
+    padding: 1.25rem;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .clientes-text1 {
-        font-size: 30px;
-        padding-top: 50px;
+        font-size: 1.875rem; /* Usando rem */
+        padding-top: 3.125rem; /* Ajuste de padding em rem */
     }
 
     .clientes-text2 {
-        font-size: 20px;
-        padding-top: 30px;
+        font-size: 1.25rem; /* Usando rem */
+        padding-top: 1.875rem; /* Ajuste de padding em rem */
     }
 
     .videos {
         flex-direction: column; /* Empilha vídeos verticalmente */
-        gap: 30px; /* Aumenta o espaçamento entre vídeos */
+        gap: 1.875rem; /* Aumenta o espaçamento entre vídeos em rem */
     }
 
     .button-center {
-        gap: 15px;
+        gap: 0.9375rem; /* Ajuste do espaçamento entre os botões */
     }
 }
 
 @media (max-width: 480px) {
     .clientes-text1 {
-        font-size: 24px;
-        padding-top: 30px;
+        font-size: 1.5rem; /* Usando rem */
+        padding-top: 1.875rem; /* Ajuste de padding em rem */
     }
 
     .clientes-text2 {
-        font-size: 18px;
-        padding-top: 20px;
+        font-size: 1.125rem; /* Usando rem */
+        padding-top: 1.25rem; /* Ajuste de padding em rem */
     }
 
     .button-center {
-        gap: 10px;
+        gap: 0.625rem; /* Ajuste do espaçamento entre os botões */
     }
 
     .videos {
         flex-direction: column;
-        gap: 20px;
+        gap: 1.25rem; /* Aumento do espaçamento entre vídeos em rem */
     }
 }

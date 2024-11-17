@@ -1,6 +1,6 @@
 /* Logo no rodapé */
 .footer-logo-col {
-    max-width: 340px;
+    max-width: 21.25rem; /* Usando rem para responsividade */
     width: 100%;
     margin: 0 auto; /* Centraliza em telas menores */
     text-align: center;
@@ -8,8 +8,8 @@
 
 /* Coluna genérica no rodapé */
 .footer-col {
-    margin: 0 0 0 140px;
-    max-width: 260px;
+    margin: 0 0 0 8.75rem; /* Usando rem para ajustabilidade */
+    max-width: 16.25rem;
     width: 100%;
 }
 
@@ -21,22 +21,22 @@
 }
 
 .footer-col li {
-    margin: 0 0 25px 0;
+    margin: 0 0 1.5625rem 0; /* Usando rem para espaçamento */
 }
 
 /* Títulos e logo do rodapé */
 footer h3,
 .footer-logo {
-    font-size: 25px;
-    margin: 0 0 25px 0;
+    font-size: 1.5625rem; /* Usando rem */
+    margin: 0 0 1.5625rem 0;
     text-align: center;
 }
 
 /* Links e parágrafos no rodapé */
 footer a,
 footer p {
-    font-size: 18px;
-    margin: 0 0 25px;
+    font-size: 1.125rem; /* Usando rem */
+    margin: 0 0 1.5625rem; /* Ajuste de espaçamento */
     line-height: 1.5;
     color: #F7F2EF;
     text-align: center;
@@ -54,9 +54,9 @@ footer a:hover {
 
 /* Links sociais */
 footer .social-links a {
-    margin: 25px 40px 0 0;
+    margin: 1.5625rem 2.5rem 0 0; /* Usando rem */
     display: inline-block;
-    font-size: 20px;
+    font-size: 1.25rem; /* Usando rem */
     color: #F7F2EF;
     transition: color 0.3s;
 }
@@ -67,15 +67,15 @@ footer .social-links a:hover {
 
 /* Área de direitos autorais */
 .footer-copy {
-    margin: 50px 0;
+    margin: 3.125rem 0;
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem; /* Usando rem */
 }
 
 .footer-copy .langs-area {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 1rem; /* Usando rem */
 }
 
 /* Responsividade */
@@ -88,7 +88,7 @@ footer .social-links a:hover {
     }
 
     .footer-logo-col {
-        margin: 20px 0;
+        margin: 1.25rem 0;
         max-width: 100%;
         width: 100%;
         text-align: center;
@@ -97,39 +97,39 @@ footer .social-links a:hover {
     footer h3,
     footer a,
     footer p {
-        font-size: 18px;
+        font-size: 1.125rem; /* Usando rem */
     }
 
     footer .social-links a {
-        margin: 15px 20px;
-        font-size: 18px;
+        margin: 0.9375rem 1.25rem;
+        font-size: 1.125rem;
     }
 
     .footer-copy {
-        margin: 30px 0;
-        font-size: 14px;
+        margin: 1.875rem 0;
+        font-size: 0.875rem; /* Usando rem */
     }
 }
 
 @media (max-width: 480px) {
     .footer-col {
         margin: 0;
-        padding: 10px;
+        padding: 0.625rem;
         text-align: center;
     }
 
     footer h3,
     footer a,
     footer p {
-        font-size: 16px;
+        font-size: 1rem; /* Usando rem */
     }
 
     footer .social-links a {
-        margin: 10px;
-        font-size: 16px;
+        margin: 0.625rem;
+        font-size: 1rem; /* Usando rem */
     }
 
     .footer-copy {
-        font-size: 12px;
+        font-size: 0.75rem; /* Usando rem */
     }
 }

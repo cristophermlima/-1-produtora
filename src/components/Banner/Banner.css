@@ -2,16 +2,16 @@
 .banner {
     background-color: #F7F2EF;
     width: 100%;
-    padding: 20px 0; /* Ajuste para evitar dependência de height fixa */
+    padding: 2rem 0; /* Ajuste com rem */
 }
 
 /* Texto principal do banner */
 .banner-text1 {
     color: #111514;
-    font-size: 30px;
-    padding: 50px 20px; /* Adicionando espaçamento para responsividade */
+    font-size: 1.875rem; /* Substituído px por rem */
+    padding: 3.125rem 1.25rem; /* Ajustado em rem */
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 50rem; /* Usando rem para larguras */
     text-align: center;
     line-height: 1.5;
 }
@@ -20,23 +20,23 @@
 .banner-text2 {
     color: #111514;
     width: 100%;
-    max-width: 600px;
-    border-radius: 20px;
-    font-size: 20px;
+    max-width: 37.5rem; /* Usando rem */
+    border-radius: 1.25rem; /* Usando rem */
+    font-size: 1.25rem; /* Substituído px por rem */
     background-color: #F5BB19;
-    margin: 50px auto;
+    margin: 3.125rem auto;
     text-align: center;
-    padding: 20px 30px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 1.25rem 1.875rem; /* Ajustado em rem */
+    box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
 }
 
 /* Texto secundário */
 .banner-text3 {
     color: #111514;
-    padding: 50px 20px;
-    font-size: 20px;
+    padding: 3.125rem 1.25rem;
+    font-size: 1.25rem; /* Substituído px por rem */
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 50rem; /* Usando rem */
     text-align: center;
     line-height: 1.6;
 }
@@ -45,70 +45,70 @@
 .banner-text4 {
     background-color: #f5ba19e3;
     color: #111514;
-    padding: 25px;
+    padding: 1.5625rem; /* Usando rem */
     width: 100%;
-    max-width: 800px;
-    font-size: 20px;
-    margin: 50px auto 40px;
+    max-width: 50rem; /* Usando rem */
+    font-size: 1.25rem; /* Substituído px por rem */
+    margin: 3.125rem auto 2.5rem;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 0.9375rem; /* Usando rem */
 }
 
 /* Texto amarelo em destaque */
 .text-yellow {
     color: #F5BB19;
-    font-size: 30px;
+    font-size: 1.875rem; /* Substituído px por rem */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .banner-text1 {
-        font-size: 24px;
-        padding: 30px 20px;
+        font-size: 1.5rem;
+        padding: 2rem 1.25rem;
     }
 
     .banner-text2 {
-        font-size: 18px;
-        padding: 15px 20px;
+        font-size: 1.125rem;
+        padding: 0.9375rem 1.25rem;
     }
 
     .banner-text3 {
-        font-size: 18px;
-        padding: 20px 15px;
+        font-size: 1.125rem;
+        padding: 1.25rem 1rem;
     }
 
     .banner-text4 {
-        font-size: 18px;
-        padding: 20px;
+        font-size: 1.125rem;
+        padding: 1.25rem;
     }
 
     .text-yellow {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .banner-text1 {
-        font-size: 20px;
-        padding: 20px 10px;
+        font-size: 1.25rem;
+        padding: 1.25rem 0.625rem;
     }
 
     .banner-text2 {
-        font-size: 16px;
-        padding: 10px 15px;
+        font-size: 1rem;
+        padding: 0.625rem 0.9375rem;
     }
 
     .banner-text3 {
-        font-size: 16px;
-        padding: 15px 10px;
+        font-size: 1rem;
+        padding: 0.9375rem 0.625rem;
     }
 
     .banner-text4 {
-        font-size: 16px;
-        padding: 15px;
+        font-size: 1rem;
+        padding: 0.9375rem;
     }
 
     .text-yellow {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 }

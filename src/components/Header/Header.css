@@ -1,8 +1,10 @@
+/* Estilização do header */
 header {
     background-color: #F7F2EF;
     padding: 10px 20px;
 }
 
+/* Estilização das listas e itens */
 header ul, li {
     list-style: none;
     margin: 0;
@@ -11,6 +13,7 @@ header ul, li {
     align-items: center;
 }
 
+/* Estilização dos links de navegação */
 nav a {
     font-weight: 600;
     color: #1E1E1E;
@@ -24,6 +27,7 @@ nav a:hover {
     color: #F5BB19;
 }
 
+/* Menu móvel */
 .mobile-menu {
     display: none;
     font-size: 25px;

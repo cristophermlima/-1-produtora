@@ -1,111 +1,206 @@
-/* Estilo base */
-.sobre {
-    background-color: #F7F2EF;
-    width: 100%;
+/* Hero.css */
+
+/* Reset para garantir que o box-sizing seja aplicado uniformemente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.titulo {
-    color: #111514;
-    font-size: 50px;
-    padding-top: 100px;
-    margin: 0 auto;
-    height: 100px;
-    width: 80%; /* Alterado para porcentagem */
-    max-width: 800px;
-    text-align: center;
+/* Container principal */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-.equipe {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap; /* Adicionado para ajustar ao redimensionar */
+/* Vídeo de fundo */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-.sobre-text1,
-.sobre-text2,
-.sobre-text3,
-.sobre-text4 {
-    width: 90%; /* Tornando a largura flexível */
-    max-width: 900px;
-    background-color: #111514;
-    color: #F7F2EF;
-    font-size: 20px;
-    padding: 50px 20px; /* Ajuste para manter espaçamento */
-    margin: 50px auto 30px auto;
-    border-radius: 15px;
-    text-align: center;
+/* Texto principal */
+.hero-text {
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
 }
 
-.sobre-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Alinhamento centralizado */
-    flex-wrap: wrap; /* Permite que os itens se ajustem */
-    gap: 20px;
-    padding: 20px;
+.hero-text .estatico h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-.image-container {
-    flex: 1 1 300px; /* Ajustável com base no espaço disponível */
-    max-width: 300px;
-    padding-bottom: 50px; /* Reduzido para dispositivos menores */
-    text-align: center;
+.hero-text .estatico .text-yellow2 {
+  color: #ffd700; /* Amarelo para destaque */
+  font-size: 4rem;
 }
 
-.image-container img {
-    width: 100%;
-    max-width: 300px; /* Limita a largura da imagem */
-    object-fit: cover;
-    padding: 0; /* Remove padding para centralizar */
+.hero-text .dinamico span {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffd700;
+  animation: fade 0.5s ease-in-out;
 }
 
+/* Animação do texto dinâmico */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Cards com Parallax */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 50px 20px;
+  perspective: 800px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  background: transparent;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) rotateY(15deg) rotateX(-5deg);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+}
+
+.card:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+  opacity: 0.5;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateZ(30px);
+}
+
+.card .message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 16px;
+  text-align: center;
+  z-index: 2;
+}
+
+.card:hover .message {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Keyframes para movimento contínuo */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotateY(0) rotateX(0);
+  }
+  50% {
+    transform: translateY(-10px) rotateY(5deg) rotateX(3deg);
+  }
+}
+
+/* Botão centralizado */
 .button-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px; /* Ajuste para dispositivos menores */
+  text-align: center;
+  margin: 30px 0;
 }
 
-/* Estilo Responsivo */
+.button-center a {
+  text-decoration: none;
+}
+
+/* Responsividade */
+
+/* Para tablets e telas médias */
 @media (max-width: 768px) {
-    .titulo {
-        font-size: 35px; /* Texto menor para telas menores */
-        padding-top: 50px;
-    }
+  .hero-text .estatico h1 {
+    font-size: 2.5rem;
+  }
 
-    .sobre-text1,
-    .sobre-text2,
-    .sobre-text3,
-    .sobre-text4 {
-        font-size: 18px; /* Texto menor */
-        padding: 30px 15px; /* Reduzido para espaço limitado */
-    }
+  .hero-text .estatico .text-yellow2 {
+    font-size: 3rem;
+  }
 
-    .sobre-container {
-        padding-right: 20px; /* Removendo espaço desnecessário */
-    }
+  .hero-text .dinamico span {
+    font-size: 3.5rem;
+  }
 
-    .image-container {
-        max-width: 100%; /* Ajuste para ocupar toda a largura */
-    }
-
-    .image-container img {
-        max-width: 90%; /* Adapta-se ao tamanho da tela */
-        padding: 0;
-    }
+  .card {
+    width: 250px;
+    height: 350px;
+  }
 }
 
+/* Para smartphones e telas pequenas */
 @media (max-width: 480px) {
-    .titulo {
-        font-size: 28px; /* Texto ainda menor */
-    }
+  .hero-text .estatico h1 {
+    font-size: 2rem;
+  }
 
-    .sobre-text1,
-    .sobre-text2,
-    .sobre-text3,
-    .sobre-text4 {
-        font-size: 16px;
-        padding: 20px 10px; /* Ajuste adicional */
-    }
+  .hero-text .estatico .text-yellow2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text .dinamico span {
+    font-size: 2.5rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 90%;
+    height: 300px;
+  }
 }
