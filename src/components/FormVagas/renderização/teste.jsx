@@ -3,23 +3,18 @@ import './teste.css';
 
 const QuestionForm = () => {
   const [currentForm, setCurrentForm] = useState(1);
-  const [inputValue, setInputValue] = useState(''); // Armazena o valor do campo de entrada atual
-  const [responses, setResponses] = useState([]); // Armazena todas as respostas do formulário
+  const [inputValue, setInputValue] = useState('');
+  const [responses, setResponses] = useState([]);
 
   const nextForm = (event) => {
     event.preventDefault();
-
-    // Salva a resposta atual no array de respostas
     setResponses((prevResponses) => [...prevResponses, inputValue]);
-
-    setCurrentForm((prevForm) => prevForm + 1); // Avança para o próximo formulário
-    setInputValue(''); // Limpa o campo de entrada
+    setCurrentForm((prevForm) => prevForm + 1);
+    setInputValue('');
   };
 
   const enviarParaSheetMonkey = async () => {
     const webhookURL = 'https://api.sheetmonkey.io/form/g1XUfBofo8XoRW1NDFaKRj';
-
-    // Formata as respostas como um objeto
     const dados = {
       Nome: responses[0],
       Cidade: responses[1],
@@ -57,9 +52,10 @@ const QuestionForm = () => {
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
+        placeholder="Digite seu nome"
         required
       />
-      <button type="submit">Enviar</button>
+      <button type="submit">Próximo</button>
     </form>,
 
     <form className="question" onSubmit={nextForm}>
@@ -68,9 +64,10 @@ const QuestionForm = () => {
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
+        placeholder="Digite sua cidade"
         required
       />
-      <button type="submit">Enviar</button>
+      <button type="submit">Próximo</button>
     </form>,
 
     <form className="question" onSubmit={nextForm}>
@@ -79,9 +76,10 @@ const QuestionForm = () => {
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
+        placeholder="(xx) xxxxx-xxxx"
         required
       />
-      <button type="submit">Enviar</button>
+      <button type="submit">Próximo</button>
     </form>,
 
     <form className="question">
@@ -90,21 +88,15 @@ const QuestionForm = () => {
         <button type="button" onClick={() => {
           setResponses((prev) => [...prev, 'Até 5 mil']);
           setCurrentForm(currentForm + 1);
-        }}>
-          Até 5 mil
-        </button>
+        }}>Até 5 mil</button>
         <button type="button" onClick={() => {
           setResponses((prev) => [...prev, 'De 5 mil a 10 mil']);
           setCurrentForm(currentForm + 1);
-        }}>
-          De 5 mil a 10 mil
-        </button>
+        }}>De 5 mil a 10 mil</button>
         <button type="button" onClick={() => {
           setResponses((prev) => [...prev, 'Mais de 10 mil']);
           setCurrentForm(currentForm + 1);
-        }}>
-          Mais de 10 mil
-        </button>
+        }}>Mais de 10 mil</button>
       </div>
     </form>,
 
@@ -114,9 +106,10 @@ const QuestionForm = () => {
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
+        placeholder="Digite sua profissão"
         required
       />
-      <button type="submit">Enviar</button>
+      <button type="submit">Próximo</button>
     </form>,
 
     <form className="question" onSubmit={nextForm}>
@@ -125,9 +118,10 @@ const QuestionForm = () => {
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
+        placeholder="Sim ou Não"
         required
       />
-      <button type="submit">Enviar</button>
+      <button type="submit">Próximo</button>
     </form>,
 
     <form className="question" onSubmit={nextForm}>
@@ -136,47 +130,31 @@ const QuestionForm = () => {
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
+        placeholder="Sim ou Não"
         required
       />
-      <button type="submit">Enviar</button>
+      <button type="submit">Próximo</button>
     </form>,
 
     <form className="question">
-      <label>
-        Você está aplicando para uma sessão estratégica de análise e
-        direcionamento para transformar cliques em clientes para o seu negócio.
-        Faz sentido para você neste momento?
-      </label>
+      <label>Faz sentido para você aplicar para uma sessão estratégica?</label>
       <div className="income-options">
         <button type="button" onClick={() => {
           setResponses((prev) => [...prev, 'SIM']);
           enviarParaSheetMonkey();
-          setCurrentForm(currentForm + 1);
-        }}>
-          SIM
-        </button>
+        }}>SIM</button>
         <button type="button" onClick={() => {
           setResponses((prev) => [...prev, 'NÃO']);
           enviarParaSheetMonkey();
-          setCurrentForm(currentForm + 1);
-        }}>
-          NÃO
-        </button>
+        }}>NÃO</button>
       </div>
     </form>,
   ];
 
   return (
     <div className="agradecimento">
-      {forms[currentForm - 1]}
-      {currentForm > forms.length && (
-        <p>
-          Parabéns por dar esse próximo passo. <br />
-          Aguarde nosso time entrar em contato com você para o agendamento. <br />
-          <br />
-          Nossos anúncios direcionados aparecem no momento certo para pessoas
-          interessadas em melhorar sua saúde e qualidade de vida.
-        </p>
+      {currentForm <= forms.length ? forms[currentForm - 1] : (
+        <p>Obrigado! Entraremos em contato em breve.</p>
       )}
     </div>
   );

@@ -1,16 +1,22 @@
 /* Logo no rodapé */
 .footer-logo-col {
-    max-width: 21.25rem; /* Usando rem para responsividade */
+    max-width: 340px;
     width: 100%;
-    margin: 0 auto; /* Centraliza em telas menores */
+    margin: 0 auto;
     text-align: center;
+}
+
+.footer-logo {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Coluna genérica no rodapé */
 .footer-col {
-    margin: 0 0 0 8.75rem; /* Usando rem para ajustabilidade */
-    max-width: 16.25rem;
+    margin: 0 auto;
+    max-width: 260px;
     width: 100%;
+    text-align: center;
 }
 
 /* Lista dentro das colunas */
@@ -21,22 +27,20 @@
 }
 
 .footer-col li {
-    margin: 0 0 1.5625rem 0; /* Usando rem para espaçamento */
+    margin-bottom: 16px;
 }
 
 /* Títulos e logo do rodapé */
-footer h3,
-.footer-logo {
-    font-size: 1.5625rem; /* Usando rem */
-    margin: 0 0 1.5625rem 0;
+footer h3 {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
     text-align: center;
 }
 
 /* Links e parágrafos no rodapé */
 footer a,
 footer p {
-    font-size: 1.125rem; /* Usando rem */
-    margin: 0 0 1.5625rem; /* Ajuste de espaçamento */
+    font-size: 1rem;
     line-height: 1.5;
     color: #F7F2EF;
     text-align: center;
@@ -53,83 +57,77 @@ footer a:hover {
 }
 
 /* Links sociais */
-footer .social-links a {
-    margin: 1.5625rem 2.5rem 0 0; /* Usando rem */
-    display: inline-block;
-    font-size: 1.25rem; /* Usando rem */
-    color: #F7F2EF;
-    transition: color 0.3s;
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 }
 
-footer .social-links a:hover {
-    color: #F5BB19;
+.social-links a img {
+    width: 24px;
+    height: 24px;
 }
 
 /* Área de direitos autorais */
 .footer-copy {
-    margin: 3.125rem 0;
+    margin: 24px 0;
     text-align: center;
-    font-size: 1rem; /* Usando rem */
+    font-size: 0.875rem;
 }
 
-.footer-copy .langs-area {
-    display: flex;
-    justify-content: center;
-    gap: 1rem; /* Usando rem */
-}
-
-/* Responsividade */
+/* Responsividade para tablets */
 @media (max-width: 768px) {
-    .footer-col {
-        margin: 0;
-        max-width: 100%;
-        width: 100%;
-        text-align: center;
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .footer-logo-col {
-        margin: 1.25rem 0;
+    .footer-col {
+        margin: 16px 0;
         max-width: 100%;
         width: 100%;
-        text-align: center;
+        padding: 0 16px;
     }
 
     footer h3,
     footer a,
     footer p {
-        font-size: 1.125rem; /* Usando rem */
+        font-size: 1rem;
     }
 
-    footer .social-links a {
-        margin: 0.9375rem 1.25rem;
-        font-size: 1.125rem;
+    .social-links a img {
+        width: 20px;
+        height: 20px;
     }
 
     .footer-copy {
-        margin: 1.875rem 0;
-        font-size: 0.875rem; /* Usando rem */
+        font-size: 0.75rem;
+        margin: 16px 0;
     }
 }
 
+/* Responsividade para celulares */
 @media (max-width: 480px) {
+    .footer-logo-col {
+        margin-bottom: 16px;
+    }
+
     .footer-col {
-        margin: 0;
-        padding: 0.625rem;
-        text-align: center;
+        padding: 8px;
     }
 
     footer h3,
     footer a,
     footer p {
-        font-size: 1rem; /* Usando rem */
+        font-size: 0.875rem;
     }
 
-    footer .social-links a {
-        margin: 0.625rem;
-        font-size: 1rem; /* Usando rem */
+    .social-links a img {
+        width: 18px;
+        height: 18px;
     }
 
     .footer-copy {
-        font-size: 0.75rem; /* Usando rem */
+        font-size: 0.75rem;
     }
 }
