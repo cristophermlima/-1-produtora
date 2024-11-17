@@ -1,191 +1,111 @@
-/* Reset para garantir uniformidade */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Estilo base */
+.sobre {
+    background-color: #F7F2EF;
+    width: 100%;
 }
 
-/* Container principal */
-.hero-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
+.titulo {
+    color: #111514;
+    font-size: 50px;
+    padding-top: 100px;
+    margin: 0 auto;
+    height: 100px;
+    width: 80%; /* Alterado para porcentagem */
+    max-width: 800px;
+    text-align: center;
 }
 
-/* Vídeo de fundo */
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: -1;
+.equipe {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /* Adicionado para ajustar ao redimensionar */
 }
 
-/* Texto principal */
-.hero-text {
-  z-index: 2;
-  padding: 20px;
+.sobre-text1,
+.sobre-text2,
+.sobre-text3,
+.sobre-text4 {
+    width: 90%; /* Tornando a largura flexível */
+    max-width: 900px;
+    background-color: #111514;
+    color: #F7F2EF;
+    font-size: 20px;
+    padding: 50px 20px; /* Ajuste para manter espaçamento */
+    margin: 50px auto 30px auto;
+    border-radius: 15px;
+    text-align: center;
 }
 
-.hero-text .estatico h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #fff;
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Alinhamento centralizado */
+    flex-wrap: wrap; /* Permite que os itens se ajustem */
+    gap: 20px;
+    padding: 20px;
 }
 
-.hero-text .estatico .text-yellow2 {
-  color: #ffd700;
-  font-size: 3.5rem;
+.image-container {
+    flex: 1 1 300px; /* Ajustável com base no espaço disponível */
+    max-width: 300px;
+    padding-bottom: 50px; /* Reduzido para dispositivos menores */
+    text-align: center;
 }
 
-.hero-text .dinamico span {
-  font-size: 4rem;
-  font-weight: bold;
-  color: #ffd700;
-  animation: fade-in 0.5s ease-in-out;
+.image-container img {
+    width: 100%;
+    max-width: 300px; /* Limita a largura da imagem */
+    object-fit: cover;
+    padding: 0; /* Remove padding para centralizar */
 }
 
-/* Animação do texto dinâmico */
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Cards com efeito parallax */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 40px 20px;
-  perspective: 1000px;
-}
-
-.card {
-  position: relative;
-  width: 280px;
-  height: 360px;
-  overflow: hidden;
-  border-radius: 12px;
-  transform-style: preserve-3d;
-  background: #333;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  animation: float 5s ease-in-out infinite;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-15px) rotateY(10deg) rotateX(-5deg);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: translateZ(30px);
-}
-
-/* Mensagem sobre a imagem */
-.card .message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 15px 25px;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.card:hover .message {
-  opacity: 1;
-}
-
-/* Animação de flutuação */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-/* Botão centralizado */
 .button-center {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.button-center a {
-  text-decoration: none;
-}
-
-/* Responsividade */
-
-/* Para tablets e telas médias */
-@media (max-width: 768px) {
-  .hero-text .estatico h1 {
-    font-size: 2rem;
-  }
-
-  .hero-text .estatico .text-yellow2 {
-    font-size: 2.5rem;
-  }
-
-  .hero-text .dinamico span {
-    font-size: 3rem;
-  }
-
-  .card {
-    width: 240px;
-    height: 320px;
-  }
-}
-
-/* Para smartphones e telas pequenas */
-@media (max-width: 480px) {
-  .hero-text .estatico h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-text .estatico .text-yellow2 {
-    font-size: 2rem;
-  }
-
-  .hero-text .dinamico span {
-    font-size: 2.2rem;
-  }
-
-  .card-container {
+    display: flex;
     flex-direction: column;
-    gap: 15px;
-  }
+    align-items: center;
+    margin-bottom: 50px; /* Ajuste para dispositivos menores */
+}
 
-  .card {
-    width: 90%;
-    height: 280px;
-  }
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 35px; /* Texto menor para telas menores */
+        padding-top: 50px;
+    }
+
+    .sobre-text1,
+    .sobre-text2,
+    .sobre-text3,
+    .sobre-text4 {
+        font-size: 18px; /* Texto menor */
+        padding: 30px 15px; /* Reduzido para espaço limitado */
+    }
+
+    .sobre-container {
+        padding-right: 20px; /* Removendo espaço desnecessário */
+    }
+
+    .image-container {
+        max-width: 100%; /* Ajuste para ocupar toda a largura */
+    }
+
+    .image-container img {
+        max-width: 90%; /* Adapta-se ao tamanho da tela */
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 28px; /* Texto ainda menor */
+    }
+
+    .sobre-text1,
+    .sobre-text2,
+    .sobre-text3,
+    .sobre-text4 {
+        font-size: 16px;
+        padding: 20px 10px; /* Ajuste adicional */
+    }
 }
