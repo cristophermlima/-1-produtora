@@ -27,6 +27,7 @@
 .hero-text {
   text-align: center;
   z-index: 2;
+  padding: 20px; /* Adicionado para dispositivos menores */
 }
 
 .hero-text .estatico h1 {
@@ -41,7 +42,6 @@
   font-size: 4rem;
 }
 
-/* Texto dinâmico */
 .hero-text .dinamico span {
   font-size: 5rem;
   font-weight: bold;
@@ -64,6 +64,7 @@
 /* Cards com Parallax */
 .card-container {
   display: flex;
+  flex-wrap: wrap; /* Ajuste para telas menores */
   gap: 20px;
   justify-content: center;
   padding: 50px 20px;
@@ -148,4 +149,51 @@
 
 .button-center a {
   text-decoration: none;
+}
+
+/* Responsividade */
+
+/* Para tablets e telas médias */
+@media (max-width: 768px) {
+  .hero-text .estatico h1 {
+    font-size: 2.5rem; /* Reduzindo o tamanho */
+  }
+
+  .hero-text .estatico .text-yellow2 {
+    font-size: 3rem; /* Reduzido */
+  }
+
+  .hero-text .dinamico span {
+    font-size: 3.5rem; /* Reduzido */
+  }
+
+  .card {
+    width: 250px; /* Reduzindo largura dos cards */
+    height: 350px;
+  }
+}
+
+/* Para smartphones e telas pequenas */
+@media (max-width: 480px) {
+  .hero-text .estatico h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text .estatico .text-yellow2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text .dinamico span {
+    font-size: 2.5rem;
+  }
+
+  .card-container {
+    flex-direction: column; /* Colocar cards em coluna */
+    gap: 10px;
+  }
+
+  .card {
+    width: 90%; /* Ocupa quase toda a largura */
+    height: 300px; /* Reduz a altura */
+  }
 }

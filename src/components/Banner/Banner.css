@@ -1,61 +1,114 @@
+/* Banner base */
 .banner {
-    background-color: #F7F2EF ;
-    width:100%;
+    background-color: #F7F2EF;
+    width: 100%;
+    padding: 20px 0; /* Ajuste para evitar dependência de height fixa */
 }
 
-.banner-text1{
+/* Texto principal do banner */
+.banner-text1 {
     color: #111514;
     font-size: 30px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 50px 20px; /* Adicionando espaçamento para responsividade */
     margin: 0 auto;
-    height: 100px;
-    width: 800px;
+    max-width: 800px;
     text-align: center;
+    line-height: 1.5;
 }
 
+/* Texto destacado no fundo amarelo */
 .banner-text2 {
     color: #111514;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     border-radius: 20px;
-    box-shadow: #111514;
     font-size: 20px;
     background-color: #F5BB19;
-    margin: 0 auto;
+    margin: 50px auto;
     text-align: center;
-    margin-top: 100px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-
-
+    padding: 20px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Texto secundário */
 .banner-text3 {
     color: #111514;
-   padding-top: 100px;
+    padding: 50px 20px;
     font-size: 20px;
     margin: 0 auto;
+    max-width: 800px;
     text-align: center;
-    padding-bottom: 50px;
-  
+    line-height: 1.6;
 }
 
+/* Bloco com fundo amarelo */
 .banner-text4 {
     background-color: #f5ba19e3;
     color: #111514;
-    padding-top: 25px;   
-    padding-bottom: 25px; 
-    width: 800px;
-    height: 100px;
+    padding: 25px;
+    width: 100%;
+    max-width: 800px;
     font-size: 20px;
-    margin: 0 auto;
+    margin: 50px auto 40px;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 40px;
     border-radius: 15px;
 }
 
+/* Texto amarelo em destaque */
 .text-yellow {
     color: #F5BB19;
     font-size: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .banner-text1 {
+        font-size: 24px;
+        padding: 30px 20px;
+    }
+
+    .banner-text2 {
+        font-size: 18px;
+        padding: 15px 20px;
+    }
+
+    .banner-text3 {
+        font-size: 18px;
+        padding: 20px 15px;
+    }
+
+    .banner-text4 {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .text-yellow {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-text1 {
+        font-size: 20px;
+        padding: 20px 10px;
+    }
+
+    .banner-text2 {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .banner-text3 {
+        font-size: 16px;
+        padding: 15px 10px;
+    }
+
+    .banner-text4 {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .text-yellow {
+        font-size: 20px;
+    }
 }

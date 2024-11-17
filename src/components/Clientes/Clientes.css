@@ -1,35 +1,87 @@
+/* Título principal */
 .clientes-text1 {
     color: #F5BB19;
-font-size: 40px;
-padding-top: 100px;
-margin: 0 auto;
-height: 100px;
-width: 800px;
-text-align: center;
+    font-size: 40px;
+    padding-top: 100px;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.2;
 }
 
+/* Subtítulo */
 .clientes-text2 {
     color: white;
-font-size: 25px;
-padding-top: 200px;
-margin: 0 auto;
-height: 100px;
-
-text-align: center;
+    font-size: 25px;
+    padding-top: 50px;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.5;
 }
 
+/* Centralização de botões */
 .button-center {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    gap: 20px; /* Espaço entre os botões */
+    padding: 50px 0;
 }
 
+/* Vídeos */
 .videos {
     display: flex;
-    justify-content: center;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que vídeos se ajustem em telas menores */
+    gap: 20px; /* Espaço entre os vídeos */
+    padding: 20px;
+}
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .clientes-text1 {
+        font-size: 30px;
+        padding-top: 50px;
+    }
+
+    .clientes-text2 {
+        font-size: 20px;
+        padding-top: 30px;
+    }
+
+    .videos {
+        flex-direction: column; /* Empilha vídeos verticalmente */
+        gap: 30px; /* Aumenta o espaçamento entre vídeos */
+    }
+
+    .button-center {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .clientes-text1 {
+        font-size: 24px;
+        padding-top: 30px;
+    }
+
+    .clientes-text2 {
+        font-size: 18px;
+        padding-top: 20px;
+    }
+
+    .button-center {
+        gap: 10px;
+    }
+
+    .videos {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

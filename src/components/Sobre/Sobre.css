@@ -1,3 +1,4 @@
+/* Estilo base */
 .sobre {
     background-color: #F7F2EF;
     width: 100%;
@@ -9,7 +10,8 @@
     padding-top: 100px;
     margin: 0 auto;
     height: 100px;
-    width: 800px;
+    width: 80%; /* Alterado para porcentagem */
+    max-width: 800px;
     text-align: center;
 }
 
@@ -17,92 +19,93 @@
     justify-content: center;
     text-align: center;
     display: flex;
-  
+    flex-wrap: wrap; /* Adicionado para ajustar ao redimensionar */
 }
 
-.sobre-text1 {
-    width: 900px;
+.sobre-text1,
+.sobre-text2,
+.sobre-text3,
+.sobre-text4 {
+    width: 90%; /* Tornando a largura flexível */
+    max-width: 900px;
     background-color: #111514;
     color: #F7F2EF;
     font-size: 20px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin: 0 auto;
-   border-radius: 15px;
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 50px;
-}
-
-.sobre-text2 {
-    width: 900px;
-    background-color: #111514;
-    color: #F7F2EF;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-size: 20px;
-    margin: 0 auto;
-    text-align: center;
+    padding: 50px 20px; /* Ajuste para manter espaçamento */
+    margin: 50px auto 30px auto;
     border-radius: 15px;
-    margin-bottom: 30px;
-}
-
-.sobre-text3 {
-    color: #F7F2EF;
-    padding-top: 100px;
-    font-size: 20px;
-    margin: 0 auto;
     text-align: center;
-    width: 900px;
-    background-color: #111514;
 }
 
 .sobre-container {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center; /* Alinhamento centralizado */
+    flex-wrap: wrap; /* Permite que os itens se ajustem */
     gap: 20px;
     padding: 20px;
-    padding-right: 500px;
-    padding-bottom: 100px;
-
-
 }
 
 .image-container {
-    flex: 0 0 300px;
+    flex: 1 1 300px; /* Ajustável com base no espaço disponível */
     max-width: 300px;
-    padding-bottom: 100px;
+    padding-bottom: 50px; /* Reduzido para dispositivos menores */
+    text-align: center;
 }
 
 .image-container img {
     width: 100%;
+    max-width: 300px; /* Limita a largura da imagem */
     object-fit: cover;
-    padding-left: 440px;
-    padding-bottom: 142px;
-
-}
-
-.sobre-text4 {
-    z-index: 2;
-    width: 900px;
-    background-color: #111514;
-    color: #F7F2EF;
-    padding: 20px;
-    border-radius: 15px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 50px;
-
+    padding: 0; /* Remove padding para centralizar */
 }
 
 .button-center {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px; /* Ajuste para dispositivos menores */
 }
 
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 35px; /* Texto menor para telas menores */
+        padding-top: 50px;
+    }
+
+    .sobre-text1,
+    .sobre-text2,
+    .sobre-text3,
+    .sobre-text4 {
+        font-size: 18px; /* Texto menor */
+        padding: 30px 15px; /* Reduzido para espaço limitado */
+    }
+
+    .sobre-container {
+        padding-right: 20px; /* Removendo espaço desnecessário */
+    }
+
+    .image-container {
+        max-width: 100%; /* Ajuste para ocupar toda a largura */
+    }
+
+    .image-container img {
+        max-width: 90%; /* Adapta-se ao tamanho da tela */
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 28px; /* Texto ainda menor */
+    }
+
+    .sobre-text1,
+    .sobre-text2,
+    .sobre-text3,
+    .sobre-text4 {
+        font-size: 16px;
+        padding: 20px 10px; /* Ajuste adicional */
+    }
+}

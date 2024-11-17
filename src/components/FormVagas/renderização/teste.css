@@ -8,6 +8,8 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 /* Container do formulário */
@@ -26,6 +28,8 @@ body {
 h1 {
     margin-bottom: 30px;
     text-align: center;
+    font-size: 28px;
+    line-height: 1.4;
 }
 
 /* Estilização do rótulo */
@@ -59,7 +63,7 @@ button {
     font-size: 16px;
     transition: background-color 0.3s;
     display: block;
-    margin: 0 auto;
+    margin: 20px auto 0;
 }
 
 button:hover {
@@ -88,19 +92,18 @@ button:hover {
     background-color: #e6c655; /* Amarelo um pouco mais escuro ao passar o mouse */
 }
 
+/* Estilização de agradecimento */
 .agradecimento {
-    margin: 160px;
-    max-width: 797px;
+    margin: 40px auto;
+    max-width: 600px;
     text-align: center;
     width: 100%;
+    font-size: 18px;
 }
 
-.agradecimento.h1 {
-    margin: 160px;
-    max-width: 797px;
-    text-align: center;
-    width: 100%;
+.agradecimento h1 {
     margin-bottom: 20px;
+    font-size: 22px;
 }
 
 /* Responsividade */
@@ -111,5 +114,42 @@ button:hover {
 
     h1 {
         font-size: 24px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .agradecimento {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .question {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .agradecimento {
+        font-size: 14px;
     }
 }

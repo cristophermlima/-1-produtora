@@ -1,25 +1,23 @@
 header {
-    
     background-color: #F7F2EF;
- 
+    padding: 10px 20px;
 }
 
-
-header ul,li {
-    margin-top: 50px;
+header ul, li {
     list-style: none;
     margin: 0;
     padding: 0;
-
+    display: flex;
+    align-items: center;
 }
 
 nav a {
     font-weight: 600;
-    height: 50px;
-    color:#1E1E1E ;
-    font-size: 20px;
+    color: #1E1E1E;
+    font-size: 18px;
     text-decoration: none;
-    margin: 0 0 0 50px;
+    margin: 0 20px;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -28,62 +26,77 @@ nav a:hover {
 
 .mobile-menu {
     display: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #1E1E1E;
 }
 
+/* Responsividade */
+@media (max-width: 1024px) {
+    nav a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+}
 
 @media (max-width: 768px) {
-    .nav.open {
-      display: flex;
-      align-items: end;
+    .mobile-menu {
+        display: block;
     }
 
     .nav {
-      background-color: #1E1E1E;
-      border-left: 10px solid #333 ;
-      display: none;
-      flex-direction: column;
-      height: 100%;
-      padding: 37px;
-      position: fixed;
-      right: 0;
-      top: 0;
-      width: 40vh;
-      z-index: 1;
-      box-shadow: -50vw 0px 0px 0px rgba(0, 0, 0, 0.75);
-
-    }
-    nav ul {
+        background-color: #1E1E1E;
+        display: none;
         flex-direction: column;
-        width: 100%;
-
+        height: 100%;
+        padding: 20px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 60vw; /* Ajusta a largura para telas menores */
+        z-index: 1000;
+        box-shadow: -50vw 0px 0px 0px rgba(0, 0, 0, 0.75);
     }
 
-    nav ul li {
+    .nav.open {
         display: flex;
     }
 
-    nav a {
-        border-bottom: 1px solid #1E1E1E;
-        color: #1E1E1E;
-        font-size: 20px;
-        margin: 0 0 10px  0;
-        padding: 12px;
-        text-decoration: none;
+    nav ul {
+        flex-direction: column;
         width: 100%;
     }
 
-    .mobile-menu {
+    nav ul li {
         display: block;
+    }
+
+    nav a {
+        border-bottom: 1px solid #333;
+        color: #F7F2EF;
+        font-size: 18px;
+        margin: 10px 0;
+        padding: 10px 0;
+        width: 100%;
     }
 
     .close-btn {
         background: none;
         border: none;
-        color: #1E1E1E;
+        color: #F7F2EF;
         font-size: 25px;
-        margin: 0 0 12px;
-        padding: 12px;
-        width: fit-content;
+        margin-bottom: 20px;
         cursor: pointer;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        width: 80vw; /* Para telas extremamente pequenas */
+    }
+
+    nav a {
+        font-size: 16px;
     }
 }

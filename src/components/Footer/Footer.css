@@ -1,67 +1,135 @@
+/* Logo no rodapé */
 .footer-logo-col {
     max-width: 340px;
     width: 100%;
+    margin: 0 auto; /* Centraliza em telas menores */
+    text-align: center;
 }
 
+/* Coluna genérica no rodapé */
 .footer-col {
     margin: 0 0 0 140px;
     max-width: 260px;
     width: 100%;
 }
 
+/* Lista dentro das colunas */
 .footer-col ul {
- 
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .footer-col li {
     margin: 0 0 25px 0;
 }
 
-footer h3, .footer-logo {
+/* Títulos e logo do rodapé */
+footer h3,
+.footer-logo {
     font-size: 25px;
-    margin:  0 0 25px 0;
+    margin: 0 0 25px 0;
+    text-align: center;
 }
 
-footer a, footer p {
-    font-size: 22px;
-    margin:  0 0 25px;
-    margin:  0 0 25px 0;
-    line-height: 150%;
+/* Links e parágrafos no rodapé */
+footer a,
+footer p {
+    font-size: 18px;
+    margin: 0 0 25px;
+    line-height: 1.5;
+    color: #F7F2EF;
+    text-align: center;
 }
 
 footer a {
     text-decoration: none;
-    color:#F7F2EF ;
+    color: #F7F2EF;
+    transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #F5BB19 ;
+    color: #F5BB19;
 }
 
+/* Links sociais */
 footer .social-links a {
     margin: 25px 40px 0 0;
+    display: inline-block;
+    font-size: 20px;
+    color: #F7F2EF;
+    transition: color 0.3s;
 }
 
+footer .social-links a:hover {
+    color: #F5BB19;
+}
+
+/* Área de direitos autorais */
 .footer-copy {
-    margin: 155px 0 50px 0;
+    margin: 50px 0;
+    text-align: center;
+    font-size: 16px;
 }
 
 .footer-copy .langs-area {
-    column-gap:  23px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
     .footer-col {
-        margin: 0 0 0 0;
+        margin: 0;
         max-width: 100%;
         width: 100%;
+        text-align: center;
     }
 
     .footer-logo-col {
-        margin: 0 0 0 0;
+        margin: 20px 0;
         max-width: 100%;
         width: 100%;
+        text-align: center;
+    }
+
+    footer h3,
+    footer a,
+    footer p {
+        font-size: 18px;
+    }
+
+    footer .social-links a {
+        margin: 15px 20px;
+        font-size: 18px;
+    }
+
+    .footer-copy {
+        margin: 30px 0;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-col {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    footer h3,
+    footer a,
+    footer p {
+        font-size: 16px;
+    }
+
+    footer .social-links a {
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    .footer-copy {
+        font-size: 12px;
     }
 }
