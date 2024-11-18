@@ -6,80 +6,126 @@
 
 .titulo {
     color: #111514;
-    background-color: #111514;
-    font-size: 50px;
-    padding-top: 50px; /* Ajuste de espaço superior */
+    font-size: 36px;
+    padding: 20px 10px;
     margin: 0 auto;
-    height: auto;
-    width: 100%; /* Ajuste para o título ocupar a largura total */
-    max-width: 800px; /* Limita a largura do título para não ficar largo demais */
     text-align: center;
-    z-index: 10; /* Garante que o título não seja sobreposto */
-    position: relative;
-    background-color: transparent; /* Garante que o fundo seja transparente */
+    z-index: 10;
+    background-color: transparent;
 }
 
 .equipe {
     justify-content: center;
     text-align: center;
     display: flex;
-    padding: 50px;
+    padding: 20px;
     color: #111514;
 }
 
+.equipe img {
+    max-width: 100%;
+    height: auto;
+}
+
 .sobre-text1, .sobre-text2, .sobre-text4 {
-    width: 900px;
+    width: 90%;
+    max-width: 900px;
     background-color: #111514;
     color: #F7F2EF;
-    font-size: 20px;
-    padding: 50px 20px;
-    margin: 0 auto;
+    font-size: 18px;
+    padding: 20px;
+    margin: 20px auto;
     border-radius: 15px;
     text-align: center;
-    margin-bottom: 30px;
+    position: relative; /* Mantém o texto acima de qualquer elemento */
+    z-index: 2;
 }
 
 .sobre-container {
+    position: relative; /* Define o contexto para posicionamento absoluto */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
     gap: 20px;
     padding: 20px;
-    padding-right: 500px;
-    padding-bottom: 100px;
 }
 
 .image-container {
-    flex: 0 0 300px;
-    max-width: 300px;
-    padding-bottom: 100px;
+    position: absolute; /* Permite posicionar a imagem sobre a última caixa */
+    top: 50%; /* Ajusta a posição vertical */
+    right: 10%; /* Ajusta a posição horizontal */
+    transform: translateY(-50%); /* Centraliza a imagem verticalmente em relação ao topo */
+    width: 280px; /* Define o tamanho da imagem */
+    max-width: 90%;
+    z-index: 1; /* Garante que a imagem fique atrás do texto */
+    opacity: 0.8; /* Deixa a imagem mais sutil */
+    padding-bottom: 25vh;
 }
 
 .image-container img {
     width: 100%;
     object-fit: cover;
-    padding-left: 440px;
-    padding-bottom: 142px;
-}
-
-.sobre-text4 {
-    z-index: 2;
-    width: 900px;
-    background-color: #111514;
-    color: #F7F2EF;
-    padding: 20px;
-    border-radius: 15px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 50px;
 }
 
 .button-center {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+}
+
+.video {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    width: 30vh;
+    height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    .sobre-text1, .sobre-text2, .sobre-text4 {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .equipe {
+        padding: 10px;
+    }
+
+    .sobre-container {
+        padding: 10px;
+    }
+
+    .image-container {
+        top: 60%; /* Ajusta a posição da imagem para telas menores */
+        right: 5%; /* Ajusta o deslocamento horizontal */
+        width: 250px; /* Reduz o tamanho da imagem */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 24px;
+    }
+
+    .sobre-text1, .sobre-text2, .sobre-text4 {
+        font-size: 14px;
+    }
+
+    .image-container {
+        top: 70%; /* Ajusta ainda mais a posição */
+        right: 2%; /* Menor deslocamento horizontal */
+        width: 200px; /* Tamanho reduzido para telas pequenas */
+    }
 }
