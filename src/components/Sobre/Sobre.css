@@ -37,12 +37,12 @@
     margin: 20px auto;
     border-radius: 15px;
     text-align: center;
-    position: relative; /* Mantém o texto acima de qualquer elemento */
+    position: relative; 
     z-index: 2;
 }
 
 .sobre-container {
-    position: relative; /* Define o contexto para posicionamento absoluto */
+    position: relative; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,14 +51,14 @@
 }
 
 .image-container {
-    position: absolute; /* Permite posicionar a imagem sobre a última caixa */
-    top: 50%; /* Ajusta a posição vertical */
-    right: 10%; /* Ajusta a posição horizontal */
-    transform: translateY(-50%); /* Centraliza a imagem verticalmente em relação ao topo */
-    width: 280px; /* Define o tamanho da imagem */
+    position: absolute; 
+    top: 50%;
+    right: 10%; 
+    transform: translateY(-50%);
+    width: 280px;
     max-width: 90%;
-    z-index: 1; /* Garante que a imagem fique atrás do texto */
-    opacity: 0.8; /* Deixa a imagem mais sutil */
+    z-index: 1;
+    opacity: 0.8;
     padding-bottom: 25vh;
 }
 
@@ -108,9 +108,9 @@ video {
     }
 
     .image-container {
-        top: 60%; /* Ajusta a posição da imagem para telas menores */
-        right: 5%; /* Ajusta o deslocamento horizontal */
-        width: 250px; /* Reduz o tamanho da imagem */
+        top: 60%; 
+        right: 5%; 
+        width: 250px; 
     }
 }
 
@@ -124,8 +124,8 @@ video {
     }
 
     .image-container {
-        top: 70%; /* Ajusta ainda mais a posição */
-        right: 2%; /* Menor deslocamento horizontal */
-        width: 200px; /* Tamanho reduzido para telas pequenas */
+        top: 70%; 
+        right: 2%;
+        width: 200px
     }
 }
