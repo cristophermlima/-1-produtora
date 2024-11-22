@@ -1,12 +1,12 @@
 /* Estilização geral */
 header {
     background-color: #F7F2EF;
-    padding: 10px 20px;
+    width: 100%;
 }
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
 }
 

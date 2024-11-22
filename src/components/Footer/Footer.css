@@ -1,7 +1,7 @@
 /* Logo no rodapé */
 .footer-logo-col {
     max-width: 340px;
-    width: 100%;
+    width: 20vh;
     margin: 0 auto;
     text-align: center;
 }
@@ -9,6 +9,7 @@
 .footer-logo {
     max-width: 100%;
     height: auto;
+    padding-right: 30px;
 }
 
 /* Coluna genérica no rodapé */
@@ -26,12 +27,17 @@
     list-style: none;
 }
 
+.solucoes p{
+    margin: 80px 0;
+}
+
 .footer-col li {
     margin-bottom: 16px;
 }
 
 /* Títulos e logo do rodapé */
 footer h3 {
+    margin: 40px 0;
     font-size: 1.25rem;
     margin-bottom: 16px;
     text-align: center;
@@ -66,6 +72,9 @@ footer a:hover {
 .social-links a img {
     width: 24px;
     height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Área de direitos autorais */

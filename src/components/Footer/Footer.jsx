@@ -21,19 +21,12 @@ function Footer() {
 
                     </div>
 
-                    <div>
+                    <div className='solucoes'>
                         <p>Soluções : <br />
-                            Videos profissionais, com estratégia e roteiros elaborados para o seu nicho.</p>
-                        <div className='d-flex social-links'>
-                            <a href="https://google.com" target='_blank'>
-                                <img src={instagram} />
-                            </a>
-                            <a href="https://google.com" target='_blank'>
-                                <img src={whatssap} color='#F7F2EF' />
-                            </a>
-
-
-                        </div>
+                            Videos profissionais, <br />
+                            com estratégia e roteiros elaborados <br />
+                            para o seu nicho.</p>
+                     
                     </div>
 
 
@@ -62,7 +55,16 @@ function Footer() {
                         <p>Rio de Janeiro</p>
                         <p>54-996301632</p>
                         <div className='d-flex jc-space-between footer-copy'>
-                           
+                        <div className='d-flex social-links'>
+                            <a href="https://google.com" target='_blank'>
+                                <img src={instagram} />
+                            </a>
+                            <a href="https://google.com" target='_blank'>
+                                <img src={whatssap} color='#F7F2EF' />
+                            </a>
+
+
+                        </div>
 
                         </div>
 
