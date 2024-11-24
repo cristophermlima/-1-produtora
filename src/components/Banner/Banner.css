@@ -20,14 +20,14 @@
 .banner-text2 {
     color: #111514;
     width: 100%;
-    max-width: 37.5rem; /* Usando rem */
-    border-radius: 1.25rem; /* Usando rem */
-    font-size: 1.25rem; /* Substituído px por rem */
+    max-width: 37.5rem; 
+    border-radius: 1.25rem;
+    font-size: 1.25rem; 
     background-color: #F5BB19;
     margin: 3.125rem auto;
     text-align: center;
-    padding: 1.25rem 1.875rem; /* Ajustado em rem */
-    box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
+    padding: 1.25rem 1.875rem; 
+    box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.8);
 }
 
 /* Texto secundário */
@@ -52,6 +52,7 @@
     margin: 3.125rem auto 2.5rem;
     text-align: center;
     border-radius: 0.9375rem; /* Usando rem */
+    box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.8);
 }
 
 /* Texto amarelo em destaque */
@@ -70,6 +71,8 @@
     .banner-text2 {
         font-size: 1.125rem;
         padding: 0.9375rem 1.25rem;
+       
+
     }
 
     .banner-text3 {

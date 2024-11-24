@@ -3,22 +3,22 @@ body {
     background-color: #121212;
     color: #f0f0f0;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente */
-    min-height: 100vh;       /* Garantir que o conteúdo ocupe 100% da altura da tela */
-    margin: 0;               /* Remove qualquer margem extra */
-    padding: 0;              /* Remove qualquer padding extra */
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;       
+    margin: 0;              
+    padding: 0;             
 }
 
 .question {
     background-color: #1f1f1f;
     border-radius: 10px;
     padding: 20px;
-    width: 90%;              /* Garante que a largura ocupe 90% da tela */
-    max-width: 500px;        /* Limita a largura máxima a 500px */
+    width: 90%;             
+    max-width: 500px;       
     text-align: left;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    margin: 0 auto; /* Garante que o formulário seja centralizado */
+    margin: 0 auto; 
 }
 
 h1 {
@@ -56,6 +56,10 @@ button {
 
 button:hover {
     background-color: #cc8400;
+    box-shadow: 0px 0px 8px #ffde59b7;
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: .2s;
 }
 
 .income-options {
@@ -68,9 +72,9 @@ button:hover {
     text-align: center;
     margin-top: 20px;
     display: flex;
-    justify-content: center; /* Garante que o conteúdo dentro de agradecimento seja centralizado */
-    align-items: center; /* Garante que o conteúdo fique centralizado verticalmente */
-    height: 100vh; /* Garante que ocupe a altura total da tela */
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
 }
 
 @media (max-width: 480px) {
