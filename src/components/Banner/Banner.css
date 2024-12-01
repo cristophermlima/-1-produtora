@@ -14,6 +14,7 @@
     max-width: 50rem; /* Usando rem para larguras */
     text-align: center;
     line-height: 1.5;
+    font-weight: 800;
 }
 
 /* Texto destacado no fundo amarelo */
@@ -27,7 +28,7 @@
     margin: 3.125rem auto;
     text-align: center;
     padding: 1.25rem 1.875rem; 
-    box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.4);
 }
 
 /* Texto secundário */
@@ -43,7 +44,7 @@
 
 /* Bloco com fundo amarelo */
 .banner-text4 {
-    background-color: #f5ba19e3;
+    background-color: #f5ba19da;
     color: #111514;
     padding: 1.5625rem; /* Usando rem */
     width: 100%;
@@ -52,7 +53,7 @@
     margin: 3.125rem auto 2.5rem;
     text-align: center;
     border-radius: 0.9375rem; /* Usando rem */
-    box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.4);
 }
 
 /* Texto amarelo em destaque */

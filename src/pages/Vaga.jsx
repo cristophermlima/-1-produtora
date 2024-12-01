@@ -10,15 +10,12 @@ function Vaga() {
 
     return (
         <>
-            <Header/>
+            <Header />
             <Form1 />
 
             <Teste />
 
 
-
-
-         
             <Footer />
         </>
     )

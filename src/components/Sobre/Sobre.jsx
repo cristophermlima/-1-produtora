@@ -2,7 +2,7 @@ import './Sobre.css'
 import equipe from '../../assets/equipe.svg'
 import Button from '../Button/Button'
 import { Link } from 'react-router-dom'
-import diego1 from '../../assets/diego1.svg'
+
 import makingof from '../../assets/makingof.mp4'
 
 function Sobre() {
@@ -60,7 +60,7 @@ function Sobre() {
                             autêntico e que realmente faz  diferença no mercado.</h1>
                     </div>
                     <div className='image-container'>
-                    <img src={diego1} className='background-image' />
+                   
                    </div>
                
                 </div>

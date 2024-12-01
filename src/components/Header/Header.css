@@ -1,135 +1,143 @@
 /* Estilização geral */
-header {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Consistência no cálculo de dimensões */
+  }
+  
+  header {
     background-color: #F7F2EF;
     width: 100%;
-}
-
-/* Container */
-.container {
-    max-width: 1240px;
+    position: relative;
+    padding: 10px 20px;
+    z-index: 10;
+  }
+  
+  .container {
+    width: 100%;
     margin: 0 auto;
-}
-
-/* Logo e navegação */
-.al-center {
+    max-width: 1140px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Navegação */
+  .nav {
     display: flex;
     align-items: center;
-}
-
-.d-flex {
+  }
+  
+  .nav ul {
     display: flex;
-}
-
-.jc-space-between {
-    justify-content: space-between;
-}
-
-/* Links de navegação */
-nav a {
+    gap: 20px;
+    list-style: none; /* Remove os marcadores padrão */
+    margin: 0;
+    padding: 0; /* Remove espaçamentos internos */
+  }
+  
+  .nav ul li {
+    display: inline-block;
+    margin: 0; /* Remove qualquer margem */
+    padding: 0;
+  }
+  
+  /* Links de navegação */
+  nav a {
     font-weight: 600;
     color: #1E1E1E;
     font-size: 18px;
     text-decoration: none;
     margin: 0 20px;
-    transition: color 0.3s ease;
-
-    transform: scale(1.05);
+    padding: 0; /* Remove espaçamentos extras */
+    transition: color 0.3s ease, transform 0.2s;
     cursor: pointer;
-    transition: .2s;
-}
-
-nav a:hover {
+  }
+  
+  nav a:hover {
     color: #F5BB19;
-}
-
-/* Menu móvel */
-.mobile-menu {
+    transform: scale(1.05);
+  }
+  
+  /* Menu móvel */
+  .mobile-menu {
     display: none;
-}
-
-.mobile-menu button {
+  }
+  
+  .mobile-menu button {
     font-size: 18px;
     cursor: pointer;
-}
-
-/* Navegação */
-.nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav ul {
-    display: flex;
-    gap: 20px;
-}
-
-/* Responsividade para tablets */
-@media (max-width: 1024px) {
-    nav a {
-        font-size: 16px;
-        margin: 0 10px;
-    }
-}
-
-/* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
+    background: none;
+    border: none;
+    color: #1E1E1E;
+  }
+  
+  /* Responsividade para dispositivos móveis */
+  @media (max-width: 768px) {
     .mobile-menu {
-        display: block;
+      display: block;
     }
-
+  
     .nav {
-        background-color: #1E1E1E;
-        display: none;
-        flex-direction: column;
-        height: 100vh;
-        padding: 20px;
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 100vw;
-        z-index: 1000;
-        box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.75);
+      background-color: #1E1E1E;
+      display: none;
+      flex-direction: column;
+      height: 100vh;
+      padding: 20px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100vw;
+      z-index: 1000;
+      box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.75);
     }
-
+  
     .nav.open {
-        display: flex;
+      display: flex;
     }
-
+  
     .nav ul {
-        flex-direction: column;
-        width: 100%;
+      flex-direction: column;
+      width: 100%;
+      gap: 0; /* Remove o espaçamento entre itens */
     }
-
+  
     .nav ul li {
-        width: 100%;
+      width: 100%;
     }
-
+  
     nav a {
-        color: #F7F2EF;
-        font-size: 18px;
-        padding: 15px 0;
-        text-align: center;
-        border-bottom: 1px solid #333;
-        width: 100%;
+      color: #F7F2EF;
+      font-size: 18px;
+      padding: 15px 0;
+      text-align: center;
+      border-bottom: 1px solid #333; /* Mantém bordas no menu móvel */
+      width: 100%;
     }
-
+  
+    nav a:last-child {
+      border-bottom: none; /* Remove a borda do último item */
+    }
+  
     .close-btn {
-        background: none;
-        border: none;
-        color: #F7F2EF;
-        font-size: 25px;
-        align-self: flex-end;
-        cursor: pointer;
+      background: none;
+      border: none;
+      color: #F7F2EF;
+      font-size: 25px;
+      align-self: flex-end;
+      cursor: pointer;
     }
-}
-
-/* Responsividade para telas muito pequenas */
-@media (max-width: 480px) {
+  }
+  
+  /* Responsividade para telas muito pequenas */
+  @media (max-width: 480px) {
     .nav {
-        width: 100vw;
+      width: 100vw;
     }
-
+  
     nav a {
-        font-size: 16px;
+      font-size: 16px;
     }
-}
+  }
+  

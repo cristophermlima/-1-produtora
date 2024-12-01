@@ -1,26 +1,30 @@
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+}
+
 /* Título principal */
 .clientes-text1 {
     color: #F5BB19;
-    font-size: 2.5rem; /* Usando rem para responsividade */
-    padding-top: 6.25rem; /* Ajuste de padding em rem */
-    margin: 0 auto;
-    height: auto;
-    width: 100%;
-    max-width: 50rem; /* Max-width em rem */
-    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 6.25rem;
+    margin: 0;
+    max-width: 50rem;
     line-height: 1.2;
 }
 
 /* Subtítulo */
 .clientes-text2 {
     color: white;
-    font-size: 1.5625rem; /* Usando rem */
-    padding-top: 3.125rem; /* Ajuste de padding em rem */
-    margin: 0 auto;
-    height: auto;
-    width: 100%;
+    font-size: 1.5625rem;
+    padding-top: 3.125rem;
+    margin: 0;
     max-width: 50rem;
-    text-align: center;
     line-height: 1.5;
 }
 
@@ -29,59 +33,68 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem; /* Usando rem */
-    padding: 3.125rem 0; /* Usando rem */
+    gap: 1.25rem;
+    padding: 3.125rem 0;
 }
 
 /* Vídeos */
 .videos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Permite que vídeos se ajustem em telas menores */
-    gap: 1.25rem; /* Espaço entre os vídeos em rem */
+    flex-wrap: wrap;
+    gap: 1.25rem;
     padding: 1.25rem;
 }
 
+.videos iframe {
+    max-width: 45%; /* Mantém proporcional */
+    height: auto;
+}
+
 /* Responsividade */
+@media (max-width: 1024px) {
+    .videos iframe {
+        max-width: 48%;
+    }
+}
+
 @media (max-width: 768px) {
     .clientes-text1 {
-        font-size: 1.875rem; /* Usando rem */
-        padding-top: 3.125rem; /* Ajuste de padding em rem */
+        font-size: 1.875rem;
+        padding-top: 3.125rem;
     }
 
     .clientes-text2 {
-        font-size: 1.25rem; /* Usando rem */
-        padding-top: 1.875rem; /* Ajuste de padding em rem */
+        font-size: 1.25rem;
+        padding-top: 1.875rem;
     }
 
-    .videos {
-        flex-direction: column; /* Empilha vídeos verticalmente */
-        gap: 1.875rem; /* Aumenta o espaçamento entre vídeos em rem */
+    .videos iframe {
+        max-width: 100%; /* Empilha na vertical */
     }
 
     .button-center {
-        gap: 0.9375rem; /* Ajuste do espaçamento entre os botões */
+        gap: 0.9375rem;
     }
 }
 
 @media (max-width: 480px) {
     .clientes-text1 {
-        font-size: 1.5rem; /* Usando rem */
-        padding-top: 1.875rem; /* Ajuste de padding em rem */
+        font-size: 1.5rem;
+        padding-top: 1.875rem;
     }
 
     .clientes-text2 {
-        font-size: 1.125rem; /* Usando rem */
-        padding-top: 1.25rem; /* Ajuste de padding em rem */
+        font-size: 1.125rem;
+        padding-top: 1.25rem;
     }
 
     .button-center {
-        gap: 0.625rem; /* Ajuste do espaçamento entre os botões */
+        gap: 0.625rem;
     }
 
-    .videos {
-        flex-direction: column;
-        gap: 1.25rem; /* Aumento do espaçamento entre vídeos em rem */
+    .videos iframe {
+        max-width: 100%; /* Vídeos empilhados verticalmente */
     }
 }

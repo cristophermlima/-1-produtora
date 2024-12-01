@@ -2,44 +2,54 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
-  font-family: "Montserrat", system-ui;
+  width: 100%;
+  padding: 0;
+  font-family: "Montserrat", system-ui, sans-serif;
   background-color: #1E1E1E;
-  color:#F7F2EF ;
+  color: #F7F2EF;
+  box-sizing: border-box; /* Adicionado para uniformizar o cálculo de tamanhos */
 }
 
 a {
-
   text-decoration: none;
 }
 
-
-.primary-background{
+.primary-background {
   background-color: #F7F2EF;
 }
-.secundary-background{
+
+.secundary-background {
   background-color: #1E1E1E;
 }
-.tertiary-background{
+
+.tertiary-background {
   background-color: #F5BB19;
 }
 
 .primary-color {
-  color: #1E1E1E ;
+  color: #1E1E1E;
 }
+
 .secundary-color {
-  color: #1E1E1E ;
+  color: #1E1E1E;
 }
+
 .tertuary-color {
   color: #F5BB19;
 }
 
-h1, h2, h3, h4,h5,h6 {
-  font-family: "Montserrat", system-ui;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", system-ui, sans-serif;
   font-size: inherit;
   padding: 0;
   margin: 0;
   letter-spacing: 2.5px;
+  font-weight: 400;
 }
 
 p {
@@ -53,41 +63,50 @@ p {
 .container {
   box-sizing: border-box;
   margin: 0 auto;
-  width: 100%;
-  max-width: 1140px;
+  width: 1240px;
   position: relative;
-  padding: 0 30px;
+  padding: 0 20px; 
+}
 
+.full-width {
+  width: 100%; /* Adiciona uma classe para elementos que devem ocupar toda a largura */
+  margin: 0; /* Remove margens padrão */
 }
 
 .al-center {
   align-items: center;
 }
+
 .al-end {
-  align-items: end;
+  align-items: flex-end;
 }
 
 .d-flex {
   display: flex;
 }
+
 .fd-column {
   flex-direction: column;
 }
+
 .jc-center {
   justify-content: center;
 }
+
 .jc-end {
-  justify-content: end;
+  justify-content: flex-end;
 }
+
 .jc-space-between {
   justify-content: space-between;
 }
 
-
-@media (max-width: 768) {
+@media (max-width: 768px) {
   .container {
-    width: 90% ;
+    width: 90%;
+    max-width: 100%; /* Garante que em telas menores o container preencha tudo */
   }
+
   .mobile-fd-column {
     flex-direction: column;
   }

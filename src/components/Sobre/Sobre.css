@@ -12,6 +12,7 @@
     text-align: center;
     z-index: 10;
     background-color: transparent;
+  
 }
 
 .equipe {
@@ -30,15 +31,16 @@
 .sobre-text1, .sobre-text2, .sobre-text4 {
     width: 90%;
     max-width: 900px;
-    background-color: #111514;
-    color: #F7F2EF;
+   
+    color: #111514;
     font-size: 18px;
     padding: 20px;
     margin: 20px auto;
-    border-radius: 15px;
+    border-radius: 5px;
     text-align: center;
     position: relative; 
     z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .sobre-container {

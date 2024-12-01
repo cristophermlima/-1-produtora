@@ -28,7 +28,7 @@ function Banner() {
 
 
                 <div className='banner-text4'>
-                    <h1>Nós vamos te ajudar a escalar seu resultado sem se preocupar com a parte "chata do processo". Nós faremos tudo!  A copy dos criativos, páginas, o tráfego para funis, os vídeos e tudo o que você precisa.</h1>
+                    <h1>Nós vamos te ajudar a escalar seu resultado sem se preocupar com a parte chata do processo. Nós faremos tudo!  A copy dos criativos, páginas, o tráfego para funis, os vídeos e tudo o que você precisa.</h1>
                 </div>
 
                 

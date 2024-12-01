@@ -8,10 +8,10 @@
 
 /* Centralização da logo */
 .logo1 {
-    display: flex;          /* Ativa o Flexbox */
-    justify-content: center; /* Centraliza a imagem horizontalmente */
-    align-items: center;     /* Centraliza a imagem verticalmente (caso o contêiner tenha uma altura específica) */
-    height: 100%;           /* Garantir que o contêiner tenha altura suficiente para centralizar verticalmente */
+    display: flex;          
+    justify-content: center; 
+    align-items: center;     
+    height: 100%;           
 }
 
 
